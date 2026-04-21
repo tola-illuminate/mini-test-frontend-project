@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeForge | Learn Programming with Confidence</title>
+    <title>E-Learning</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/output.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -63,7 +64,7 @@
             >
               <i class="fas fa-code text-white text-xl"></i>
             </div>
-            <span class="text-2xl font-bold">SabbayRean</span>
+            <span class="text-2xl font-bold">E-Learning</span>
           </div>
 
           <div
@@ -106,7 +107,10 @@
         Interactive courses and real-world projects.
       </p>
 
-      <a href="#" class="px-8 py-4 gradient-bg text-white rounded-xl font-bold">
+      <a
+        href="#"
+        class="px-8 py-4 gradient-bg text-white rounded-xl font-bold hover:opacity-80 transition-opacity hover:scale-106 transition"
+      >
         Get Started
       </a>
     </header>
@@ -211,7 +215,7 @@
             class="group relative p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-800 transition-all duration-300 shadow-sm hover:shadow-xl"
           >
             <div
-              class="w-12 h-12 mb-6 gradient-bg text-white flex items-center justify-center rounded-xl font-bold text-lg shadow-lg group-hover:scale-110 transition-transform"
+              class="w-12 h-12 mb-6 gradient-bg text-white flex items-center justify-center rounded-xl font-bold text-lg shadow-lg transition-transform"
             >
               1
             </div>
@@ -293,47 +297,7 @@
     <script src="./assets/js/app.js"></script>
     <script src="./assets/data/courses.js"></script>
     <script src="./assets/data/testimonials.js"></script>
-    <script>
-      const testimonials = [
-        {
-          name: "John Doe",
-          role: "Dev",
-          company: "Google",
-          quote: "Works great!",
-          avatar: "https://i.pravatar.cc/150?u=1",
-        },
-        {
-          name: "Sarah Smith",
-          role: "UX",
-          company: "Airbnb",
-          quote: "Amazing design.",
-          avatar: "https://i.pravatar.cc/150?u=2",
-        },
-      ];
 
-      // const testimonialGrid = document.getElementById("testimonial-grid");
-
-      // if (testimonialGrid) {
-      //   grid.innerHTML = testimonials
-      //     .map(
-      //       (item) => `
-      //           <div class="break-inside-avoid mb-6 bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-      //               <div class="flex items-center gap-3 mb-4">
-      //                   <img src="${item.avatar}" class="w-10 h-10 rounded-full" alt="${item.name}">
-      //                   <div>
-      //                       <h4 class="font-bold text-sm dark:text-white">${item.name}</h4>
-      //                       <p class="text-xs text-zinc-500">${item.role} @ ${item.company}</p>
-      //                   </div>
-      //               </div>
-      //               <p class="text-zinc-600 dark:text-zinc-400 text-sm italic">"${item.quote}"</p>
-      //           </div>
-      //       `,
-      //     )
-      //     .join("");
-      // } else {
-      //   console.error("Could not find the testimonial-grid element!");
-      // }
-    </script>
     <script>
       const toggleBtn = document.getElementById("themeToggle");
       const html = document.documentElement;
