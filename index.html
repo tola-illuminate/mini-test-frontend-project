@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeForge | Learn Programming with Confidence</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                indigo: "#6366f1",
+                violet: "#a855f7",
+                cyan: "#22d3ee",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .gradient-text {
+        background: linear-gradient(to right, #6366f1, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #6366f1, #a855f7);
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 font-sans transition-colors duration-300"
+  >
+    <!-- NAVBAR -->
+    <nav
+      class="fixed w-full z-50 bg-gradient-to-r from-white/60 via-white/40 to-white/60 dark:from-zinc-900/60 dark:via-zinc-900/40 dark:to-zinc-900/60 backdrop-blur-2xl border-b dark:border-white/20 dark:border-zinc-800/50"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between py-2 items-center">
+          <div class="flex items-center gap-2">
+            <div
+              class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center"
+            >
+              <i class="fas fa-code text-white text-xl"></i>
+            </div>
+            <span class="text-2xl font-bold">SabbayRean</span>
+          </div>
+
+          <div
+            class="hidden md:flex items-center space-x-8 text-sm font-medium"
+          >
+            <a href="#" class="text-brand-indigo">Home</a>
+            <a
+              href="./pages/courses.html"
+              class="text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+              >Courses</a
+            >
+            <a
+              href="#"
+              class="text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+              >Community</a
+            >
+            <a
+              href="#"
+              class="text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+              >About</a
+            >
+
+            <!-- THEME BUTTON -->
+            <button id="themeToggle" class="p-2 text-xl">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="pt-40 pb-20 text-center">
+      <h1 class="text-5xl font-extrabold mb-6">
+        Learn Programming <br />
+        <span class="gradient-text">With Confidence</span>
+      </h1>
+
+      <p class="text-zinc-500 dark:text-zinc-400 mb-8">
+        Interactive courses and real-world projects.
+      </p>
+
+      <a href="#" class="px-8 py-4 gradient-bg text-white rounded-xl font-bold">
+        Get Started
+      </a>
+    </header>
+
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+            Powerful Features to Boost Your Learning
+          </h2>
+          <p class="text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto">
+            Everything you need to become a confident developer, all in one
+            platform.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Repeat pattern -->
+          <div
+            class="group glass-card border dark:border-gray-200/20 p-8 rounded-2xl hover:scale-105 transition"
+          >
+            <i class="fas fa-terminal text-3xl text-brand-cyan mb-6"></i>
+            <h3 class="font-bold mb-2">Cloud IDE</h3>
+            <p class="text-zinc-500 dark:text-zinc-400">
+              Code instantly in browser.
+            </p>
+          </div>
+
+          <div
+            class="group glass-card border dark:border-gray-200/20 p-8 rounded-2xl hover:scale-105 transition"
+          >
+            <i class="fas fa-users text-3xl text-brand-violet mb-6"></i>
+            <h3 class="font-bold mb-2">Mentorship</h3>
+            <p class="text-zinc-500 dark:text-zinc-400">Learn from experts.</p>
+          </div>
+
+          <div
+            class="group glass-card border dark:border-gray-200/20 p-8 rounded-2xl hover:scale-105 transition"
+          >
+            <i class="fas fa-certificate text-3xl text-brand-indigo mb-6"></i>
+            <h3 class="font-bold mb-2">Certificates</h3>
+            <p class="text-zinc-500 dark:text-zinc-400">
+              Earn proof of skills.
+            </p>
+          </div>
+
+          <div
+            class="group glass-card border dark:border-gray-200/20 p-8 rounded-2xl hover:scale-105 transition"
+          >
+            <i class="fas fa-laptop-code text-3xl text-brand-indigo mb-6"></i>
+            <h3 class="font-bold mb-2">Real Projects</h3>
+            <p class="text-zinc-500 dark:text-zinc-400">
+              Build real-world apps.
+            </p>
+          </div>
+
+          <div
+            class="group glass-card border dark:border-gray-200/20 p-8 rounded-2xl hover:scale-105 transition"
+          >
+            <i class="fas fa-clock text-3xl text-brand-cyan mb-6"></i>
+            <h3 class="font-bold mb-2">Flexible Learning</h3>
+            <p class="text-zinc-500 dark:text-zinc-400">Learn anytime.</p>
+          </div>
+
+          <div
+            class="group glass-card border dark:border-gray-200/20 p-8 rounded-2xl hover:scale-105 transition"
+          >
+            <i class="fas fa-globe text-3xl text-brand-violet mb-6"></i>
+            <h3 class="font-bold mb-2">Global Community</h3>
+            <p class="text-zinc-500 dark:text-zinc-400">Connect worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-zinc-50 dark:bg-zinc-900">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">
+          Popular Courses
+        </h2>
+
+        <div id="course-grid" class="grid md:grid-cols-3 gap-8"></div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white dark:bg-zinc-950">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl"
+          >
+            How It Works
+          </h2>
+          <p class="mt-4 text-zinc-500 dark:text-zinc-400">
+            Four simple steps to master your next skill.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div
+            class="group relative p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-800 transition-all duration-300 shadow-sm hover:shadow-xl"
+          >
+            <div
+              class="w-12 h-12 mb-6 gradient-bg text-white flex items-center justify-center rounded-xl font-bold text-lg shadow-lg group-hover:scale-110 transition-transform"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 dark:text-white mb-2">
+              Sign Up
+            </h3>
+            <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+              Create your account and join our global community.
+            </p>
+          </div>
+
+          <div
+            class="group relative p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-800 transition-all duration-300 shadow-sm hover:shadow-xl"
+          >
+            <div
+              class="w-12 h-12 mb-6 gradient-bg text-white flex items-center justify-center rounded-xl font-bold text-lg shadow-lg group-hover:scale-110 transition-transform"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 dark:text-white mb-2">
+              Choose Course
+            </h3>
+            <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+              Browse curated paths tailored to your goals.
+            </p>
+          </div>
+
+          <div
+            class="group relative p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-800 transition-all duration-300 shadow-sm hover:shadow-xl"
+          >
+            <div
+              class="w-12 h-12 mb-6 gradient-bg text-white flex items-center justify-center rounded-xl font-bold text-lg shadow-lg group-hover:scale-110 transition-transform"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 dark:text-white mb-2">
+              Practice
+            </h3>
+            <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+              Build real-world projects with hands-on labs.
+            </p>
+          </div>
+
+          <div
+            class="group relative p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-800 transition-all duration-300 shadow-sm hover:shadow-xl"
+          >
+            <div
+              class="w-12 h-12 mb-6 gradient-bg text-white flex items-center justify-center rounded-xl font-bold text-lg shadow-lg group-hover:scale-110 transition-transform"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 dark:text-white mb-2">
+              Get Certified
+            </h3>
+            <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+              Validate your skills with a verified certificate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-zinc-50 dark:bg-zinc-950 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">
+          What Students Say
+        </h2>
+
+        <div class="swiper testimonial-swiper">
+          <div id="testimonial-slider-wrapper" class="swiper-wrapper"></div>
+
+          <div class="swiper-pagination !static mt-10"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- components footer  -->
+    <div id="footer"></div>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/data/courses.js"></script>
+    <script src="./assets/data/testimonials.js"></script>
+    <script>
+      const testimonials = [
+        {
+          name: "John Doe",
+          role: "Dev",
+          company: "Google",
+          quote: "Works great!",
+          avatar: "https://i.pravatar.cc/150?u=1",
+        },
+        {
+          name: "Sarah Smith",
+          role: "UX",
+          company: "Airbnb",
+          quote: "Amazing design.",
+          avatar: "https://i.pravatar.cc/150?u=2",
+        },
+      ];
+
+      // const testimonialGrid = document.getElementById("testimonial-grid");
+
+      // if (testimonialGrid) {
+      //   grid.innerHTML = testimonials
+      //     .map(
+      //       (item) => `
+      //           <div class="break-inside-avoid mb-6 bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+      //               <div class="flex items-center gap-3 mb-4">
+      //                   <img src="${item.avatar}" class="w-10 h-10 rounded-full" alt="${item.name}">
+      //                   <div>
+      //                       <h4 class="font-bold text-sm dark:text-white">${item.name}</h4>
+      //                       <p class="text-xs text-zinc-500">${item.role} @ ${item.company}</p>
+      //                   </div>
+      //               </div>
+      //               <p class="text-zinc-600 dark:text-zinc-400 text-sm italic">"${item.quote}"</p>
+      //           </div>
+      //       `,
+      //     )
+      //     .join("");
+      // } else {
+      //   console.error("Could not find the testimonial-grid element!");
+      // }
+    </script>
+    <script>
+      const toggleBtn = document.getElementById("themeToggle");
+      const html = document.documentElement;
+
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+
+      // Init
+      if (
+        localStorage.theme === "dark" ||
+        (!localStorage.theme && prefersDark)
+      ) {
+        html.classList.add("dark");
+        toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+      } else {
+        html.classList.remove("dark");
+        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+
+      // Toggle
+      toggleBtn.addEventListener("click", () => {
+        html.classList.toggle("dark");
+
+        if (html.classList.contains("dark")) {
+          localStorage.theme = "dark";
+          toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+          localStorage.theme = "light";
+          toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+      });
+    </script>
+  </body>
+</html>

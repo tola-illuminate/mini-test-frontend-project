@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses | CodeForge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: { indigo: "#6366f1", violet: "#a855f7", cyan: "#22d3ee" },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-card {
+        background: rgba(24, 24, 27, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(63, 63, 70, 0.4);
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #6366f1, #a855f7);
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 font-sans">
+    <!-- NAVBAR -->
+    <nav
+      class="fixed w-full z-50 bg-gradient-to-r from-white/60 via-white/40 to-white/60 dark:from-zinc-900/60 dark:via-zinc-900/40 dark:to-zinc-900/60 backdrop-blur-2xl border-b dark:border-white/20 dark:border-zinc-800/50"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between py-2 items-center">
+          <div class="flex items-center gap-2">
+            <div
+              class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center"
+            >
+              <i class="fas fa-code text-white text-xl"></i>
+            </div>
+            <span class="text-2xl font-bold">SabbayRean</span>
+          </div>
+
+          <div
+            class="hidden md:flex items-center space-x-8 text-sm font-medium"
+          >
+            <a href="../index.html" class="text-brand-indigo">Home</a>
+            <a
+              href="./courses.html"
+              class="text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+              >Courses</a
+            >
+            <a
+              href="./community.html"
+              class="text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+              >Community</a
+            >
+            <a
+              href="./about.html"
+              class="text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+              >About</a
+            >
+
+            <!-- THEME BUTTON -->
+            <button id="themeToggle" class="p-2 text-xl">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-4 max-w-7xl mx-auto">
+      <div
+        class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12"
+      >
+        <div>
+          <h1 class="text-4xl font-bold mb-2">Explore Courses</h1>
+          <p class="text-zinc-400">
+            Master the most in-demand technical skills.
+          </p>
+        </div>
+        <div class="w-full md:w-96 flex gap-2">
+          <input
+            type="text"
+            placeholder="Search courses..."
+            class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 outline-none focus:border-brand-indigo"
+          />
+          <button
+            class="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:text-brand-indigo transition"
+          >
+            <i class="fas fa-filter"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex gap-4 mb-10 overflow-x-auto pb-2 no-scrollbar">
+        <button
+          class="px-6 py-2 gradient-bg rounded-full text-sm font-bold whitespace-nowrap"
+        >
+          All Topics
+        </button>
+        <button
+          class="px-6 py-2 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-full text-sm font-medium whitespace-nowrap"
+        >
+          Web Development
+        </button>
+        <button
+          class="px-6 py-2 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-full text-sm font-medium whitespace-nowrap"
+        >
+          Python
+        </button>
+        <button
+          class="px-6 py-2 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-full text-sm font-medium whitespace-nowrap"
+        >
+          Cloud Computing
+        </button>
+        <button
+          class="px-6 py-2 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-full text-sm font-medium whitespace-nowrap"
+        >
+          Data Science
+        </button>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        id="courseGrid"
+      >
+        <script>
+          const courses = [
+            {
+              title: "Python for Data Science",
+              level: "Beginner",
+              duration: "24h",
+              img: "indigo",
+              price: "Free",
+            },
+            {
+              title: "Advanced React Patterns",
+              level: "Expert",
+              duration: "12h",
+              img: "violet",
+              price: "$49",
+            },
+            {
+              title: "Go Microservices",
+              level: "Intermediate",
+              duration: "18h",
+              img: "cyan",
+              price: "$29",
+            },
+            {
+              title: "Rust System Programming",
+              level: "Expert",
+              duration: "30h",
+              img: "indigo",
+              price: "$59",
+            },
+            {
+              title: "Fullstack Next.js 14",
+              level: "Intermediate",
+              duration: "20h",
+              img: "violet",
+              price: "Free",
+            },
+            {
+              title: "DevOps with Kubernetes",
+              level: "Advanced",
+              duration: "15h",
+              img: "cyan",
+              price: "$39",
+            },
+            {
+              title: "Java Spring Boot Pro",
+              level: "Intermediate",
+              duration: "22h",
+              img: "indigo",
+              price: "$45",
+            },
+            {
+              title: "TypeScript Deep Dive",
+              level: "Beginner",
+              duration: "8h",
+              img: "violet",
+              price: "Free",
+            },
+            {
+              title: "AWS Cloud Practitioner",
+              level: "Beginner",
+              duration: "10h",
+              img: "cyan",
+              price: "$19",
+            },
+          ];
+
+          document.write(
+            courses
+              .map(
+                (c) => `
+                    <div class="glass-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition duration-300">
+                        <div class="h-48 bg-${c.img}-900 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                            <i class="fas fa-laptop-code text-5xl text-${c.img}-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="px-3 py-1 bg-zinc-800 rounded-md text-xs font-bold text-brand-cyan">${c.level}</span>
+                                <span class="text-zinc-400 text-sm"><i class="far fa-clock mr-1"></i> ${c.duration}</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 group-hover:text-brand-indigo transition">${c.title}</h3>
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="flex text-yellow-500 text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-zinc-500 text-xs">(1,240 students)</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-4 border-t border-zinc-800">
+                                <span class="text-xl font-bold">${c.price}</span>
+                                <a href="./course-detail.html" class="text-sm font-bold text-brand-indigo hover:underline">View Course</a>
+                            </div>
+                        </div>
+                    </div>
+                `,
+              )
+              .join(""),
+          );
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

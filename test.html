@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeForge | Learn Programming with Confidence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            indigo: '#6366f1',
+                            violet: '#a855f7',
+                            cyan: '#22d3ee'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card { background: rgba(24, 24, 27, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(63, 63, 70, 0.4); }
+        .gradient-text { background: linear-gradient(to right, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-bg { background: linear-gradient(135deg, #6366f1, #a855f7); }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans selection:bg-indigo-500/30">
+
+    <nav class="fixed w-full z-50 glass-card border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-code text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold tracking-tight">CodeForge</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="./index.html" class="text-brand-indigo">Home</a>
+                    <a href="./courses.html" class="text-zinc-400 hover:text-white transition">Courses</a>
+                    <a href="./community.html" class="text-zinc-400 hover:text-white transition">Community</a>
+                    <a href="./about.html" class="text-zinc-400 hover:text-white transition">About Us</a>
+                    <button id="themeToggle" class="p-2 text-zinc-400 hover:text-white"><i class="fas fa-moon"></i></button>
+                    <a href="#" class="px-5 py-2.5 gradient-bg rounded-full font-semibold hover:opacity-90 transition">Dashboard</a>
+                </div>
+
+                <div class="md:hidden flex items-center gap-4">
+                    <button id="mobileMenuBtn" class="text-zinc-100 text-2xl"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800 p-4 space-y-4">
+            <a href="./index.html" class="block text-brand-indigo">Home</a>
+            <a href="./courses.html" class="block text-zinc-400">Courses</a>
+            <a href="./community.html" class="block text-zinc-400">Community</a>
+            <a href="./about.html" class="block text-zinc-400">About Us</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-20">
+            <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-600 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-violet-600 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                Learn Any Programming <br><span class="gradient-text">Language with Confidence</span>
+            </h1>
+            <p class="text-zinc-400 text-lg lg:text-xl max-w-2xl mx-auto mb-10">
+                Interactive courses, real-time coding practice, and expert mentorship in Python, JavaScript, Java, Go, Rust, and more.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="./courses.html" class="px-8 py-4 gradient-bg rounded-xl font-bold text-lg hover:scale-105 transition-transform">Start Learning Free</a>
+                <button class="px-8 py-4 bg-zinc-900 border border-zinc-700 rounded-xl font-bold text-lg hover:bg-zinc-800 transition">Watch Demo</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="fixed bottom-6 right-6 z-50 glass-card px-4 py-2 rounded-full flex items-center gap-3 border border-zinc-700 shadow-2xl">
+        <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+        </span>
+        <span class="text-sm font-medium text-zinc-200">1,284 learning right now</span>
+    </div>
+
+    <section class="py-20 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl group hover:border-brand-indigo transition">
+                    <i class="fas fa-terminal text-3xl text-brand-cyan mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Cloud Sandbox</h3>
+                    <p class="text-zinc-400">Code directly in your browser with our built-in IDE. No setup required.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl group hover:border-brand-violet transition">
+                    <i class="fas fa-users text-3xl text-brand-violet mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Expert Mentorship</h3>
+                    <p class="text-zinc-400">Get unstuck quickly with 24/7 support from industry professionals.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl group hover:border-brand-indigo transition">
+                    <i class="fas fa-certificate text-3xl text-brand-indigo mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Verified Certs</h3>
+                    <p class="text-zinc-400">Earn industry-recognized certificates for every course you complete.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-900 border-t border-zinc-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 gradient-bg rounded flex items-center justify-center"><i class="fas fa-code text-white"></i></div>
+                    <span class="text-xl font-bold">CodeForge</span>
+                </div>
+                <p class="text-zinc-400 max-w-sm mb-6">Empowering developers worldwide with high-quality education and a supportive community.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-zinc-500 hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="text-zinc-500 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-zinc-500 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Platform</h4>
+                <ul class="space-y-4 text-zinc-400">
+                    <li><a href="./courses.html" class="hover:text-white transition">Courses</a></li>
+                    <li><a href="./community.html" class="hover:text-white transition">Community</a></li>
+                    <li><a href="#" class="hover:text-white transition">Mentors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Newsletter</h4>
+                <div class="flex gap-2">
+                    <input type="email" placeholder="Email address" class="bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 w-full outline-none focus:border-brand-indigo">
+                    <button class="px-4 py-2 gradient-bg rounded-lg font-bold">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-zinc-600 text-sm border-t border-zinc-800 pt-8">
+            &copy; 2026 CodeForge E-Learning. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Logic
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // Simple Theme Toggle (Visual only for this static demo)
+        const themeBtn = document.getElementById('themeToggle');
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const icon = themeBtn.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+    </script>
+</body>
+</html>
